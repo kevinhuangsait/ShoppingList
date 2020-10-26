@@ -1,6 +1,6 @@
 <%-- 
     Document   : register
-    Created on : Oct 25, 2020, 4:45:59 PM
+    Created on : Oct 25, 2020, 4:46:06 PM
     Author     : 831719
 --%>
 
@@ -13,25 +13,10 @@
     </head>
     <body>
         <h1>Shopping List</h1>
-        <p>Hello, ${username}</p>
-        <a href="<c:url value='ShoppingList?action=logout'/>">Logout</a>
-        
-        <h2>List</h2>
         <form action="ShoppingList" method="post">
-            Add Item: <input type="text" name="item">
-            <input type="hidden" name="action" value="add">
-            <input type="submit" value="Add">
-        </form>
-        
-        <form action="ShoppingList" method="post">
-            <c:if test="${shopList != null}">
-                <c:forEach var="itemList" items="${shopList}">
-                    <li> <input type="radio" name="listedItem" value="${itemList}">${itemList} </li>
-                </c:forEach>
-            </c:if>
-                <input type="hidden" name="action" value="delete">
-                <input type="submit" value="Delete">
-            
+            Username: <input type="text" name="username" value="${username}">
+            <input type="hidden" name="action" value="register">
+            <input type="submit" value="Register name">
         </form>
     </body>
 </html>
