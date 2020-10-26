@@ -24,7 +24,7 @@
         </form>
         
         <form action="ShoppingList" method="post">
-            <c:if test="${shoppingList != null}">
+            <c:if test="${shopList != null}">
                 <c:forEach var="itemList" items="${shopList}">
                     <li> <input type="radio" name="listedItem" value="${itemList}">${itemList} </li>
                 </c:forEach>
